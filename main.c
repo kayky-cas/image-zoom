@@ -7,36 +7,36 @@
 void draw_pixels(struct image_s *zoom, uint8_t color, int color_pos, int width, int pix_pos) {
     if (color >= 75 && color <= 134) {
         if (color_pos == 0) {
-            zoom->pix[3 * width + pix_pos + color_pos].r = color;
+            zoom->pix[3 * width + (3 * pix_pos) + color_pos].r = color;
         } else if (color_pos == 1) {
-            zoom->pix[3 * width + pix_pos + color_pos].g = color;
+            zoom->pix[3 * width + (3 * pix_pos) + color_pos].g = color;
         } else {
-            zoom->pix[3 * width + pix_pos + color_pos].b = color;
+            zoom->pix[3 * width + (3 * pix_pos) + color_pos].b = color;
         }
     } else if (color >= 135 && color <= 179) {
         if (color_pos == 0) {
-            zoom->pix[0 * 3 * width + pix_pos + color_pos].r = color;
-            zoom->pix[2 * 3 * width + pix_pos + color_pos].r = color;
+            zoom->pix[0 * 3 * width + (3 * pix_pos) + color_pos].r = color;
+            zoom->pix[2 * 3 * width + (3 * pix_pos) + color_pos].r = color;
         } else if (color_pos == 1) {
-            zoom->pix[0 * 3 * width + pix_pos + color_pos].g = color;
-            zoom->pix[2 * 3 * width + pix_pos + color_pos].g = color;
+            zoom->pix[0 * 3 * width + (3 * pix_pos) + color_pos].g = color;
+            zoom->pix[2 * 3 * width + (3 * pix_pos) + color_pos].g = color;
         } else {
-            zoom->pix[0 * 3 * width + pix_pos + color_pos].b = color;
-            zoom->pix[2 * 3 * width + pix_pos + color_pos].b = color;
+            zoom->pix[0 * 3 * width + (3 * pix_pos) + color_pos].b = color;
+            zoom->pix[2 * 3 * width + (3 * pix_pos) + color_pos].b = color;
         }
     } else if (color >= 180) {
         if (color_pos == 0) {
-            zoom->pix[0 * 3 * width + pix_pos + color_pos].r = color;
-            zoom->pix[1 * 3 * width + pix_pos + color_pos].r = color;
-            zoom->pix[2 * 3 * width + pix_pos + color_pos].r = color;
+            zoom->pix[0 * 3 * width + (3 * pix_pos) + color_pos].r = color;
+            zoom->pix[1 * 3 * width + (3 * pix_pos) + color_pos].r = color;
+            zoom->pix[2 * 3 * width + (3 * pix_pos) + color_pos].r = color;
         } else if (color_pos == 1) {
-            zoom->pix[0 * 3 * width + pix_pos + color_pos].g = color;
-            zoom->pix[1 * 3 * width + pix_pos + color_pos].g = color;
-            zoom->pix[2 * 3 * width + pix_pos + color_pos].g = color;
+            zoom->pix[0 * 3 * width + (3 * pix_pos) + color_pos].g = color;
+            zoom->pix[1 * 3 * width + (3 * pix_pos) + color_pos].g = color;
+            zoom->pix[2 * 3 * width + (3 * pix_pos) + color_pos].g = color;
         } else {
-            zoom->pix[0 * 3 * width + pix_pos + color_pos].b = color;
-            zoom->pix[1 * 3 * width + pix_pos + color_pos].b = color;
-            zoom->pix[2 * 3 * width + pix_pos + color_pos].b = color;
+            zoom->pix[0 * 3 * width + (3 * pix_pos) + color_pos].b = color;
+            zoom->pix[1 * 3 * width + (3 * pix_pos) + color_pos].b = color;
+            zoom->pix[2 * 3 * width + (3 * pix_pos) + color_pos].b = color;
         }
     }
 }
